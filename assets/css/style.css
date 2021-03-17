@@ -13,7 +13,6 @@ body {
 
 .header-box {
     display:flex;
-    flex-wrap: wrap;
     background-color: #13293d;
     height: 100px;
     width: 100%;
@@ -33,37 +32,28 @@ body {
 }
 
 .my-name h1 {
-
     color:white
 }
 
 /* --NAV-- */
 
-.nav-bar {
-    width: 400px;
+nav {
+    display:flex;
+    justify-content: flex-end;
+    background-color: #13293d;
 }
 
-.nav-bar ul {
-    justify-content:space-between;
-    padding-right: 20px;
-}
-
-.nav-bar ul li {
-    display: inline-block;
-    list-style: none;
-    margin:10px;
-    right: 0;
-    justify-content: space-between;
-}
-
-.nav-bar a {
-    color:white;
+nav a {
+    text-align: center;
+    color: white;
     text-decoration: none;
-    font-size: 1.2rem;
-    justify-content: space-between;
+    padding: 0px 20px 0px 20px;
+    font-size: 1.25rem;
 }
 
-.nav-bar a:hover {
+
+
+nav a:hover {
     color: dimgray
 }
 
@@ -94,32 +84,57 @@ body {
   justify-content: flex-end
 }
 
-.home-main-section {
+.main-section {
     display:flex;
     flex-wrap: wrap;
     align-items: center;
     align-content: center;
     justify-content: space-between;
+    
 }
+
+.About-Me-Wrapper {
+    display:flex;
+    flex-direction: row;
+}
+
 
 .About-Me-Title {
-    flex-direction: row;
-    height:200px;
-    width:200px;
+    background-color: red;
+    height:150px;
+    width:250px;
     color: #13293d;
-    background-color: firebrick;
-}
-
-.About-Me-Text {
-
+    text-align: right;
+    padding-right: 20px;
 }
 
 .About-Me-Title h2 {
-  color: #13293d;
-  font-weight: 500;
-  font-size: 2rem;
-  margin-bottom: 1 rem;
-  margin-top: 0;
-
+    position: relative;
+    padding-left: 100px;
 }
 
+.About-Me-Text {
+    color:#13293d;
+    margin: 0px 50px 0px 50px;
+}
+
+.About-Me-Text p {
+    border-left: 5px solid darkolivegreen;
+    padding: 0px 50px 0px 50px;
+}
+
+
+@media screen and (max-width: 768px) {
+    .header-box {
+      flex-direction: column;
+    }
+
+    nav {
+        margin: 15px;
+        flex-direction: column;
+        width: inherit;
+    }
+
+    nav a {
+        margin: 5px 0px 5px 0px;
+    }
